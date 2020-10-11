@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Honey Harvest</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="container-fluid">
+    <div class="row bg-warning text-center">
+      <div class="col-12">
+        <h1>Honey Harvest!</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-fluid honeycomb-background">
+    <div class="row text-light pt-2">
+      <div class="col-md-6">
+
+        <h3>Upgrades:</h3>
+
+        <button class="btn btn-warning font-weight-bold" onclick="buySpoon()">Buy Spoon</button>
+        <p>Cost: <span id='spoon-price'></span> honey pots, +1 hpot/spoon</p>
+
+        <button class="btn btn-warning font-weight-bold" onclick="buyShovel()">Buy Shovel</button>
+        <p>Cost: <span id='shovel-price'></span> honey pots, +5 hpot/shovel</p>
+
+        <button class="btn btn-warning font-weight-bold" onclick="buyElectronicSuctionPump()">Buy Electronic Suction
+          Pump</button>
+        <p>Cost: <span id="pump-price"></span> honey pots, +1
+          hpot/pump every 3s</p>
+
+        <button class="btn btn-warning font-weight-bold" onclick="buyExtractor()">Buy Extractor</button>
+        <p>Cost: <span id="extractor-price"></span> honey pots, +5 hpot/extractor every 3s</p>
+
+        <h3>Inventory:</h3>
+        <p>Spoons: <span id="spoon-count"></span></p>
+        <p>Electronic Pumps: <span id="pump-count"></span></p>
+        <p>Shovels: <span id="shovel-count"></span></p>
+        <p>Extractors: <span id="extractor-count"></span></p>
+      </div>
+
+      <div class="col-md-5">
+        <div class="img-fluid beehive-image">
+          <h3 class="font-weight-bold">Click the beehive!</h3>
+          <h5>Honey Pot Count: <span id="honeypot-count"></span></h5>
+          <img onclick="harvest()" src="beehive-transparent-2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid">
+    <div class="row bg-warning text-center">
+      <div class="col-12">
+        <h1>Brought to you buy The Honey Pot Company</h1>
+        <p><i>Everything tastes better with honey.</i></p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
