@@ -26,18 +26,21 @@
 
         <h3>Upgrades:</h3>
 
-        <button class="btn btn-warning font-weight-bold" onclick="buySpoon()">Buy Spoon</button>
+        <button id="spoon-button" class="btn btn-warning font-weight-bold" onclick="buySpoon()">Buy
+          Spoon</button>
         <p>Cost: <span id='spoon-price'></span> honey pots, +1 hpot/spoon</p>
 
-        <button class="btn btn-warning font-weight-bold" onclick="buyShovel()">Buy Shovel</button>
+        <button id="shovel-button" class="btn btn-warning font-weight-bold" onclick="buyShovel()">Buy Shovel</button>
         <p>Cost: <span id='shovel-price'></span> honey pots, +5 hpot/shovel</p>
 
-        <button class="btn btn-warning font-weight-bold" onclick="buyElectronicSuctionPump()">Buy Electronic Suction
+        <button id="pump-button" class="btn btn-warning font-weight-bold" onclick="buyElectronicSuctionPump()">Buy
+          Electronic Suction
           Pump</button>
         <p>Cost: <span id="pump-price"></span> honey pots, +1
           hpot/pump every 3s</p>
 
-        <button class="btn btn-warning font-weight-bold" onclick="buyExtractor()">Buy Extractor</button>
+        <button id="extractor-button" class="btn btn-warning font-weight-bold" onclick="buyExtractor()">Buy
+          Extractor</button>
         <p>Cost: <span id="extractor-price"></span> honey pots, +5 hpot/extractor every 3s</p>
 
         <h3>Inventory:</h3>
@@ -51,7 +54,7 @@
         <div class="img-fluid beehive-image">
           <h3 class="font-weight-bold">Click the beehive!</h3>
           <h5>Honey Pot Count: <span id="honeypot-count"></span></h5>
-          <img onclick="harvest()" src="beehive-transparent-2.png" alt="">
+          <img id="beehive" onclick="harvest()" src="beehive-transparent-2.png" alt="">
         </div>
       </div>
     </div>

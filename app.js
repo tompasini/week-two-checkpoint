@@ -32,6 +32,12 @@ function harvest() {
   honeyPot += (1 + spoonModifier + shovelModifier)
   console.log(honeyPot)
   update()
+
+  //This sets a 3 second cooldown between clicks.
+  // document.getElementById('beehive').removeAttribute("onclick")
+  // setTimeout(() => {
+  //   document.getElementById('beehive').setAttribute('onclick', 'harvest()')
+  // }, 3000);
 }
 
 function buySpoon() {
@@ -103,6 +109,32 @@ function collectAutoUpgrades() {
   update()
 }
 
+function checkHoneyPots() {
+  if (honeyPot < 5) {
+    document.getElementById('spoon-button').disabled = true
+  } else {
+    document.getElementById('spoon-button').removeAttribute('disabled')
+  }
+
+  if (honeyPot < 20) {
+    document.getElementById('shovel-button').disabled = true
+  } else {
+    document.getElementById('shovel-button').removeAttribute('disabled')
+  }
+
+  if (honeyPot < 10) {
+    document.getElementById('pump-button').disabled = true
+  } else {
+    document.getElementById('pump-button').removeAttribute('disabled')
+  }
+
+  if (honeyPot < 100) {
+    document.getElementById('extractor-button').disabled = true
+  } else {
+    document.getElementById('extractor-button').removeAttribute('disabled')
+  }
+}
+
 function update() {
 
   let honeyPotCountElem = document.getElementById('honeypot-count')
@@ -125,6 +157,8 @@ function update() {
   pumpPriceElem.innerText = (automaticUpgrades.electronicSuctionPump.price).toString()
   shovelPriceElem.innerText = (clickUpgrades.shovel.price).toString()
   extractorPriceElem.innerText = (automaticUpgrades.extractor.price).toString()
+
+  checkHoneyPots()
 
 }
 
